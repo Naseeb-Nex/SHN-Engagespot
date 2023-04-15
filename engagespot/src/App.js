@@ -23,7 +23,7 @@ const App = () => {
   return (
     <div>
       <Engagespot apiKey="70lqwpbeq4kicg0xszf4z9" userId="Nex" theme = {theme} />,
-      <button onClick={sendNotification}
+      <button onClick={() => sendNotification()}
          >Send</button>
     </div>
   )
