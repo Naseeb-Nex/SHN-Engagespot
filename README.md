@@ -15,20 +15,19 @@ Alertify is a React-based application for sending messages and information based
 
 1. Clone the repository:
 
-`git clone https://github.com/Naseeb-Nex/SHN-Engagespot`
+   `git clone https://github.com/Naseeb-Nex/SHN-Engagespot`
 
 2. Install dependencies:
 
-`cd engagespot
-npm install`
+   `cd engagespot npm install`
 
 3. Create a `.env` file and add the following variables:
-`
-ENGAGESPOT_API_KEY=<your_engagespot_api_key> ENGAGESPOT_PROJECT_ID=<your_engagespot_project_id>
-`
+
+   `ENGAGESPOT_API_KEY=<your_engagespot_api_key> ENGAGESPOT_PROJECT_ID=<your_engagespot_project_id>`
+   
 4. Start the application:
 
-`npm start`
+   `npm start`
 
 ## Usage
 
