@@ -8,8 +8,9 @@ Alertify is a React-based application for sending messages and information based
 - [Installation](#installation)
 - [Usage](#usage)
 - [Features](#features)
-- [Contributing](#contributing)
-- [License](#license)
+- [Demo](#Demo)
+- [Libraries Used](#Libraries Used)
+
 
 ## Installation
 
@@ -40,8 +41,25 @@ Alertify is a React-based application for sending messages and information based
 
 - React-based frontend for easy and intuitive use.
 - EngageSpot integration for push notifications.
-- Join by username to receive messages and information.
-- Customizable message templates.
-- you can share messages also
+- Join and get community messages, informatives, media and more 
+- login using username and other credentials
+- You can create community messages, informatives and also share media
+- Get instant notification via inapp
 
-## Saturday HackNight
+## Demo
+
+[![IMAGE ALT TEXT HERE](https://images.pond5.com/youtube-player-overlay-footage-090868775_iconl.jpeg)](https://drive.google.com/file/d/1I7AvKChvPhIYvCP3aREn-yKhcKJLkL2X/view?usp=share_link)
+
+
+## Libraries Used
+
+- React
+- Material UI
+- Axios
+- EngageSpot
+
+<div align='end'>
+
+### SATURDAY HACKNIGHT
+
+</div>
