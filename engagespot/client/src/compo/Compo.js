@@ -8,6 +8,7 @@ import { useContext } from 'react';
 import { DataContext } from '../Context/DataContext';
 import Home from '../Home/Home';
 import './Compo.css'; // Import the CSS file
+import FeedSection from '../Feed/FeedSection';
 
 const Compo = () => {
   const { user } = useContext(DataContext);
@@ -32,16 +33,19 @@ const Compo = () => {
   return (
     <div className="wrapper">
       <Routes>
+       {user?
         <Route
-          path="/send"
+          path="/feed"
           element={
             <div>
               <Engagespot apiKey="70lqwpbeq4kicg0xszf4z9" userId={user} theme={theme} />
-              <Home />
+              <FeedSection/>
             </div>
           }
         />
+        :null}
         <Route path="/" element={<LoginPage />} />
+        <Route  path='/send' element={<Home/>}/>
       </Routes>
     </div>
   );

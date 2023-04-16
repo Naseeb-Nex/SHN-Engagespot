@@ -1,34 +1,27 @@
 import axios from 'axios';
 
-export const sendNotification = (array,find) => {
-
-
-
+export const sendNotification = (array, username) => {
+    const lastItem = array[array.length - 1]; // Get the last item from the array
   
-    array.map((item,i) => {
-
-    
+    // Send the last item to the API
     return axios.post(
-        'https://api.engagespot.co/v3/notifications',
-        {
-            "notification": {
-                "title":item.title,
-                "message": item.description,
-                "category": item.author,
-              },
-            recipients:find,
+      'https://api.engagespot.co/v3/notifications',
+      {
+        notification: {
+          title: lastItem.title,
+          message: lastItem.description,
+          category: lastItem.author,
         },
-        {
-            headers: {
-                'X-ENGAGESPOT-API-KEY': "70lqwpbeq4kicg0xszf4z9",
-                'X-ENGAGESPOT-API-SECRET':"af76nif9i5hs8rb80grtl7bjjbafah9f4118c498d9ef0j",
-            },
-        }
+        recipients: username,
+      },
+      {
+        headers: {
+          'X-ENGAGESPOT-API-KEY': '70lqwpbeq4kicg0xszf4z9',
+          'X-ENGAGESPOT-API-SECRET': 'af76nif9i5hs8rb80grtl7bjjbafah9f4118c498d9ef0j',
+        },
+      }
     );
-   
-})
-};
-
+  };
 const URL = "http://localhost:8000"
 export const authSignup = async (data) => {
     try {
@@ -44,9 +37,9 @@ export const authSignup = async (data) => {
 
 export const dataCreate = async (data) => {
     try {
-      
+        
         return await axios.post(`${URL}/create`, data)
-       
+         
     } catch (error) {
         console.log("error on dataCreate")
 
@@ -63,9 +56,10 @@ export const dataGet = async () => {
     }
 
 }
-export const getUser = async () => {
+export const getUser = async (setusername) => {
     try {
-       return await axios.get(`${URL}/getuser`)
+       let res = await axios.get(`${URL}/getuser`)
+       setusername(res.data.usernames)
     } catch (error) {
         console.log("error on dataGet")
 
